@@ -1,3 +1,5 @@
+require "byebug"
+
 class Calculator
     def sum(a, b)
         a + b
@@ -17,6 +19,7 @@ test_sum = {
 }
 
 test_sum.each do |input, expected|
+    byebug
     if !(calc.sum(input[0], input[1]) == expected)
         raise "Test failed for input #{input}. Expected result #{expected} but was #{calc.sum(input[0], input[1])}"
     else
